@@ -1,3 +1,13 @@
+/* Estilos gerais */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4ece3;
+    color: #2e4d20;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 /* Modo escuro */
 .dark-mode {
     background-color: #2e4d20;
@@ -23,9 +33,3 @@ button:hover {
         font-size: 16px;
     }
 }
-.dark-mode {
-    background-color: #2e4d20; /* Verde escuro */
-    color: #f4ece3; /* Bege quente */
-}
-
-
