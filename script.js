@@ -1,9 +1,6 @@
-// Alternar modo escuro
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
+let index = 0;
 
-// Carrossel
+// Função do Carrossel
 function moveSlide(direction) {
     const slides = document.querySelectorAll(".slide");
     index += direction;
@@ -32,20 +29,4 @@ function startSimulation() {
 // Calculadora de Pegada Rural
 function calculateImpact() {
     alert("Sua pegada rural é equilibrada! Você pode melhorar comprando diretamente de agricultores locais.");
-}
-
-// Salvar perfil do usuário
-function saveProfile() {
-    let username = document.getElementById("username").value;
-    if (username) {
-        alert(`Perfil salvo! Bem-vindo, ${username}.`);
-        localStorage.setItem("username", username);
-    } else {
-        alert("Digite um nome válido!");
-    }
-}
-
-// Compartilhamento social
-function shareContent() {
-    alert("Compartilhe seu amor pelo campo e cidade nas redes sociais!");
 }
