@@ -1,6 +1,10 @@
-let index = 0;
+// Alternar modo escuro
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
 
-// Função do Carrossel
+// Corrigir carrossel
+let index = 0;
 function moveSlide(direction) {
     const slides = document.querySelectorAll(".slide");
     index += direction;
@@ -19,14 +23,4 @@ function speakText() {
     speech.rate = 1;
     speech.pitch = 1;
     window.speechSynthesis.speak(speech);
-}
-
-// Simulação de Cultivo Urbano
-function startSimulation() {
-    alert("Você escolheu cultivar manjericão! Regue regularmente e deixe ao sol por pelo menos 4 horas/dia.");
-}
-
-// Calculadora de Pegada Rural
-function calculateImpact() {
-    alert("Sua pegada rural é equilibrada! Você pode melhorar comprando diretamente de agricultores locais.");
 }
