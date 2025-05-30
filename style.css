@@ -1,1 +1,26 @@
+/* Modo escuro */
+.dark-mode {
+    background-color: #2e4d20;
+    color: #f4ece3;
+}
+
+/* Botões com animação */
+button {
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #d4a054;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
 
