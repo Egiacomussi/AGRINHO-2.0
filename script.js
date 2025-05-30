@@ -49,4 +49,7 @@ function saveProfile() {
 function shareContent() {
     alert("Compartilhe seu amor pelo campo e cidade nas redes sociais!");
 }
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
 
