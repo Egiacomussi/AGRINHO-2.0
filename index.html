@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festejando a conexão campo-cidade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="title">Festejando a conexão campo-cidade</h1>
+        <button onclick="toggleDarkMode()">🌙 Alternar Modo Escuro</button>
+    </header>
+
+    <!-- Espaço de Login -->
+    <section class="login">
+        <h2>Área do Usuário</h2>
+        <input type="text" id="username" placeholder="Digite seu nome">
+        <button onclick="saveProfile()">Salvar Perfil</button>
+    </section>
+
+    <!-- Carrossel de Receitas -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="slide"><img src="img1.jpg" alt="Receita rural"></div>
+            <div class="slide"><img src="img2.jpg" alt="Ingrediente urbano"></div>
+            <div class="slide"><img src="img3.jpg" alt="Prato tradicional"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Histórias Conectadas -->
+    <section class="stories">
+        <h2>Histórias Conectadas</h2>
+        <p>Depoimentos de quem vive a conexão entre campo e cidade.</p>
+    </section>
+
+    <!-- Mapa Interativo -->
+    <section class="map">
+        <h2>Mapa da Conexão</h2>
+        <iframe src="https://www.google.com/maps/embed" width="600" height="450"></iframe>
+    </section>
+
+    <!-- Podcast e Vídeos -->
+    <section class="podcast">
+        <h2>Podcast & Entrevistas em Vídeo</h2>
+        <audio controls>
+            <source src="podcast.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+        
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OUTRO_VIDEO" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Mercado Local -->
+    <section class="market">
+        <h2>Mercado Local</h2>
+        <p>Compre produtos direto dos produtores rurais.</p>
+        <button>🔎 Explorar Produtos</button>
+    </section>
+
+    <!-- Simulação de Cultivo Urbano -->
+    <section class="cultivo">
+        <h2>Simulação: Cultive na Cidade</h2>
+        <p>Aprenda a plantar ervas e vegetais em espaços pequenos!</p>
+        <button onclick="startSimulation()">🌱 Começar Simulação</button>
+    </section>
+
+    <!-- Calculadora de Pegada Rural -->
+    <section class="calculator">
+        <h2>Calculadora de Pegada Rural</h2>
+        <p>Descubra como suas escolhas impactam a conexão campo-cidade.</p>
+        <button onclick="calculateImpact()">📊 Calcular Agora</button>
+    </section>
+
+    <!-- Espaço Infantil -->
+    <section class="kids">
+        <h2>Espaço Infantil</h2>
+        <p>Jogos e histórias para crianças aprenderem sobre o campo!</p>
+        <button>🎮 Explorar</button>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog">
+        <h2>Blog & Notícias</h2>
+        <p>Explore artigos sobre receitas, cultivo urbano e cultura rural.</p>
+        <button onclick="shareContent()">📢 Compartilhar</button>
+    </section>
+
+    <!-- Agenda Viva -->
+    <section class="events">
+        <h2>Agenda Viva</h2>
+        <ul>
+            <li>🌾 Feira agrícola - 15 de junho</li>
+            <li>🎭 Festival de cultura rural - 22 de julho</li>
+        </ul>
+    </section>
+
+    <!-- Leitor Dinâmico -->
+    <button onclick="speakText()">🔊 Ouça o conteúdo</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
