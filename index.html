@@ -10,6 +10,7 @@
 
     <header>
         <h1 class="title">Festejando a conexão campo-cidade</h1>
+        <button onclick="toggleDarkMode()">🌙 Alternar Modo Escuro</button>
     </header>
 
     <!-- Carrossel de Receitas -->
@@ -77,11 +78,25 @@
         <button>🎮 Explorar</button>
     </section>
 
-    <!-- Galeria de Fotos e Vídeos -->
+    <!-- Galeria de Fotos & Vídeos -->
     <section class="gallery">
         <h2>Galeria de Fotos & Vídeos</h2>
         <p>Veja momentos incríveis que conectam campo e cidade.</p>
-        <button>📷 Ver Galeria</button>
+
+        <div class="gallery-container">
+            <img src="images/foto1.jpg" alt="Fazenda ao amanhecer">
+            <img src="images/foto2.jpg" alt="Feira de produtos orgânicos">
+            <img src="images/foto3.jpg" alt="Crianças aprendendo a plantar">
+            <img src="images/foto4.jpg" alt="Colheita de hortaliças frescas">
+            <img src="images/foto5.jpg" alt="Família em um sítio rural">
+        </div>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OUTRO_VIDEO" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <button>📷 Ver Galeria Completa</button>
     </section>
 
     <!-- Agenda Viva -->
@@ -99,3 +114,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
