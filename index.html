@@ -6,16 +6,55 @@
     <title>Festejando a conexão campo-cidade</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Corrigir fundo fixo */
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f4ece3; /* Bege quente */
+            color: #2e4d20; /* Verde musgo */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
         /* Melhorando os botões */
         button {
-            font-size: 1.5em; /* Aumenta o tamanho do texto */
-            padding: 15px 30px; /* Mais espaço ao redor do texto */
-            border-radius: 10px; /* Bordas arredondadas */
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border-radius: 10px;
             cursor: pointer;
+            background-color: #8a5a2f;
+            color: white;
+            border: none;
         }
 
         button:hover {
-            background-color: #ddd; /* Efeito ao passar o mouse */
+            background-color: #643d1a;
+        }
+
+        /* Carrossel funcionando */
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Galeria aprimorada */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery-container img {
+            width: 200px;
+            height: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -23,79 +62,12 @@
 
     <header>
         <h1 class="title">Festejando a conexão campo-cidade</h1>
-        <button onclick="toggleDarkMode()">🌙 Alternar Modo Escuro</button>
     </header>
 
-    <!-- Carrossel de Receitas -->
-    <section class="carousel">
-        <div class="carousel-container">
-            <div class="slide"><img src="img1.jpg" alt="Receita rural"></div>
-            <div class="slide"><img src="img2.jpg" alt="Ingrediente urbano"></div>
-            <div class="slide"><img src="img3.jpg" alt="Prato tradicional"></div>
-        </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </section>
-
-    <!-- Histórias Conectadas -->
-    <section class="stories">
-        <h2>Histórias Conectadas</h2>
-        <p>Depoimentos de quem vive a conexão entre campo e cidade.</p>
-    </section>
-
-    <!-- Mapa Interativo -->
-    <section class="map">
-        <h2>Mapa da Conexão</h2>
-        <iframe src="https://www.google.com/maps/embed" width="600" height="450"></iframe>
-    </section>
-
-    <!-- Podcast e Vídeos -->
-    <section class="podcast">
-        <h2>Podcast & Entrevistas em Vídeo</h2>
-        <audio controls>
-            <source src="podcast.mp3" type="audio/mpeg">
-            Seu navegador não suporta áudio.
-        </audio>
-        
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OUTRO_VIDEO" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- Mercado Local -->
-    <section class="market">
-        <h2>Mercado Local</h2>
-        <p>Compre produtos direto dos produtores rurais.</p>
-        <button>🔎 Explorar Produtos</button>
-    </section>
-
-    <!-- Simulação de Cultivo Urbano -->
-    <section class="cultivo">
-        <h2>Simulação: Cultive na Cidade</h2>
-        <p>Aprenda a plantar ervas e vegetais em espaços pequenos!</p>
-        <button onclick="startSimulation()">🌱 Começar Simulação</button>
-    </section>
-
-    <!-- Calculadora de Pegada Rural -->
-    <section class="calculator">
-        <h2>Calculadora de Pegada Rural</h2>
-        <p>Descubra como suas escolhas impactam a conexão campo-cidade.</p>
-        <button onclick="calculateImpact()">📊 Calcular Agora</button>
-    </section>
-
-    <!-- Espaço Infantil -->
-    <section class="kids">
-        <h2>Espaço Infantil</h2>
-        <p>Jogos e histórias para crianças aprenderem sobre o campo!</p>
-        <button>🎮 Explorar</button>
-    </section>
-
-    <!-- Galeria de Fotos & Vídeos -->
+    <!-- Galeria Interativa -->
     <section class="gallery">
         <h2>Galeria de Fotos & Vídeos</h2>
         <p>Veja momentos incríveis que conectam campo e cidade.</p>
-
         <div class="gallery-container">
             <img src="images/foto1.jpg" alt="Fazenda ao amanhecer">
             <img src="images/foto2.jpg" alt="Feira de produtos orgânicos">
@@ -103,22 +75,7 @@
             <img src="images/foto4.jpg" alt="Colheita de hortaliças frescas">
             <img src="images/foto5.jpg" alt="Família em um sítio rural">
         </div>
-
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OUTRO_VIDEO" frameborder="0" allowfullscreen></iframe>
-        </div>
-
         <button onclick="window.open('galeria.html', '_blank')">📷 Ver Galeria Completa</button>
-    </section>
-
-    <!-- Agenda Viva -->
-    <section class="events">
-        <h2>Agenda Viva</h2>
-        <ul>
-            <li>🌾 Feira agrícola - 15 de junho</li>
-            <li>🎭 Festival de cultura rural - 22 de julho</li>
-        </ul>
     </section>
 
     <!-- Leitor Dinâmico -->
@@ -127,11 +84,11 @@
     <script>
         function speakText() {
             let msg = new SpeechSynthesisUtterance();
-            msg.text = document.body.innerText; // Captura o texto da página
-            msg.lang = "pt-BR"; // Define o idioma como português brasileiro
-            msg.rate = 1.2; // Ajusta a velocidade da fala
-            msg.pitch = 1.2; // Melhora a entonação para uma voz mais natural
-            msg.volume = 1; // Volume máximo
+            msg.text = document.body.innerText;
+            msg.lang = "pt-BR";
+            msg.rate = 1.2;
+            msg.pitch = 1.2;
+            msg.volume = 1;
             window.speechSynthesis.speak(msg);
         }
     </script>
