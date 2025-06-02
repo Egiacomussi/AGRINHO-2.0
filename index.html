@@ -25,15 +25,24 @@
             background-color: #8a5a2f;
             color: white;
             border: none;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
         }
 
         button:hover {
             background-color: #643d1a;
+            transform: scale(1.05);
         }
 
-        /* Carrossel funcionando */
+        /* Carrossel aprimorado */
         .carousel-container {
             display: flex;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
             transition: transform 0.5s ease-in-out;
         }
 
@@ -42,19 +51,28 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         .gallery-container img {
-            width: 200px;
-            height: 150px;
+            width: 220px;
+            height: 160px;
             border-radius: 8px;
             object-fit: cover;
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
         }
 
         .gallery-container img:hover {
             transform: scale(1.1);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-container video {
+            width: 300px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -68,7 +86,7 @@
     <section class="gallery">
         <h2>Galeria de Fotos & Vídeos</h2>
         <p>Veja momentos incríveis que conectam campo e cidade.</p>
-        <div class="gallery-container">
+        <div class="gallery-container" id="galleryContainer">
             <img src="images/foto1.jpg" alt="Fazenda ao amanhecer">
             <img src="images/foto2.jpg" alt="Feira de produtos orgânicos">
             <img src="images/foto3.jpg" alt="Crianças aprendendo a plantar">
@@ -95,3 +113,4 @@
 
 </body>
 </html>
+
