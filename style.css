@@ -1,4 +1,4 @@
-/* Corrigir fundo fixo */
+/* Corrigir fundo bege quente */
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f4ece3 !important; /* Bege quente fixo */
@@ -6,12 +6,6 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-/* Removendo qualquer efeito de modo escuro */
-body.dark-mode {
-    background-color: #f4ece3 !important;
-    color: #2e4d20 !important;
 }
 
 /* Carrossel funcionando */
@@ -40,3 +34,4 @@ body.dark-mode {
     transform: scale(1.1);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
+
