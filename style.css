@@ -1,11 +1,17 @@
-/* Corrigir fundo bege quente */
+/* Corrigir fundo fixo */
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f4ece3 !important; /* Bege quente fixo */
-    color: #2e4d20;
+    color: #2e4d20; /* Verde musgo */
     text-align: center;
     margin: 0;
     padding: 0;
+}
+
+/* Removendo qualquer efeito de modo escuro */
+body.dark-mode {
+    background-color: #f4ece3 !important;
+    color: #2e4d20 !important;
 }
 
 /* Carrossel funcionando */
@@ -14,7 +20,7 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Galeria */
+/* Galeria aprimorada */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
