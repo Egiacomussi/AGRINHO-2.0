@@ -1,8 +1,3 @@
-// Alternar modo escuro
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-
 // Corrigir carrossel
 let index = 0;
 function moveSlide(direction) {
@@ -24,3 +19,4 @@ function speakText() {
     speech.pitch = 1;
     window.speechSynthesis.speak(speech);
 }
+
