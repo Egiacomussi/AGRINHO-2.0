@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Festejando a conexão campo-cidade</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Melhorando os botões */
+        button {
+            font-size: 1.5em; /* Aumenta o tamanho do texto */
+            padding: 15px 30px; /* Mais espaço ao redor do texto */
+            border-radius: 10px; /* Bordas arredondadas */
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd; /* Efeito ao passar o mouse */
+        }
+    </style>
 </head>
 <body>
 
@@ -111,6 +124,17 @@
     <!-- Leitor Dinâmico -->
     <button onclick="speakText()">🔊 Ouça o conteúdo</button>
 
-    <script src="script.js"></script>
+    <script>
+        function speakText() {
+            let msg = new SpeechSynthesisUtterance();
+            msg.text = document.body.innerText; // Captura o texto da página
+            msg.lang = "pt-BR"; // Define o idioma como português brasileiro
+            msg.rate = 1.2; // Ajusta a velocidade da fala
+            msg.pitch = 1.2; // Melhora a entonação para uma voz mais natural
+            msg.volume = 1; // Volume máximo
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
+
 </body>
 </html>
