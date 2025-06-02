@@ -6,73 +6,16 @@
     <title>Festejando a conexão campo-cidade</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Corrigir fundo fixo */
-        body {
-            font-family: "Poppins", sans-serif;
-            background-color: #f4ece3; /* Bege quente */
-            color: #2e4d20; /* Verde musgo */
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
         /* Melhorando os botões */
         button {
-            font-size: 1.5em;
-            padding: 15px 30px;
-            border-radius: 10px;
+            font-size: 1.5em; /* Aumenta o tamanho do texto */
+            padding: 15px 30px; /* Mais espaço ao redor do texto */
+            border-radius: 10px; /* Bordas arredondadas */
             cursor: pointer;
-            background-color: #8a5a2f;
-            color: white;
-            border: none;
-            transition: background-color 0.3s ease-in-out, transform 0.2s;
         }
 
         button:hover {
-            background-color: #643d1a;
-            transform: scale(1.05);
-        }
-
-        /* Carrossel aprimorado */
-        .carousel-container {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        /* Galeria aprimorada */
-        .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .gallery-container img {
-            width: 220px;
-            height: 160px;
-            border-radius: 8px;
-            object-fit: cover;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-        }
-
-        .gallery-container img:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .gallery-container video {
-            width: 300px;
-            border-radius: 8px;
-            object-fit: cover;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            background-color: #ddd; /* Efeito ao passar o mouse */
         }
     </style>
 </head>
@@ -82,18 +25,99 @@
         <h1 class="title">Festejando a conexão campo-cidade</h1>
     </header>
 
-    <!-- Galeria Interativa -->
+    <!-- Carrossel de Receitas -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="slide"><img src="img1.jpg" alt="Receita rural"></div>
+            <div class="slide"><img src="img2.jpg" alt="Ingrediente urbano"></div>
+            <div class="slide"><img src="img3.jpg" alt="Prato tradicional"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Histórias Conectadas -->
+    <section class="stories">
+        <h2>Histórias Conectadas</h2>
+        <p>Depoimentos de quem vive a conexão entre campo e cidade.</p>
+    </section>
+
+    <!-- Mapa Interativo -->
+    <section class="map">
+        <h2>Mapa da Conexão</h2>
+        <iframe src="https://www.google.com/maps/embed" width="600" height="450"></iframe>
+    </section>
+
+    <!-- Podcast e Vídeos -->
+    <section class="podcast">
+        <h2>Podcast & Entrevistas em Vídeo</h2>
+        <audio controls>
+            <source src="podcast.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+        
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OUTRO_VIDEO" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Mercado Local -->
+    <section class="market">
+        <h2>Mercado Local</h2>
+        <p>Compre produtos direto dos produtores rurais.</p>
+        <button>🔎 Explorar Produtos</button>
+    </section>
+
+    <!-- Simulação de Cultivo Urbano -->
+    <section class="cultivo">
+        <h2>Simulação: Cultive na Cidade</h2>
+        <p>Aprenda a plantar ervas e vegetais em espaços pequenos!</p>
+        <button onclick="startSimulation()">🌱 Começar Simulação</button>
+    </section>
+
+    <!-- Calculadora de Pegada Rural -->
+    <section class="calculator">
+        <h2>Calculadora de Pegada Rural</h2>
+        <p>Descubra como suas escolhas impactam a conexão campo-cidade.</p>
+        <button onclick="calculateImpact()">📊 Calcular Agora</button>
+    </section>
+
+    <!-- Espaço Infantil -->
+    <section class="kids">
+        <h2>Espaço Infantil</h2>
+        <p>Jogos e histórias para crianças aprenderem sobre o campo!</p>
+        <button>🎮 Explorar</button>
+    </section>
+
+    <!-- Galeria de Fotos & Vídeos -->
     <section class="gallery">
         <h2>Galeria de Fotos & Vídeos</h2>
         <p>Veja momentos incríveis que conectam campo e cidade.</p>
-        <div class="gallery-container" id="galleryContainer">
+
+        <div class="gallery-container">
             <img src="images/foto1.jpg" alt="Fazenda ao amanhecer">
             <img src="images/foto2.jpg" alt="Feira de produtos orgânicos">
             <img src="images/foto3.jpg" alt="Crianças aprendendo a plantar">
             <img src="images/foto4.jpg" alt="Colheita de hortaliças frescas">
             <img src="images/foto5.jpg" alt="Família em um sítio rural">
         </div>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OUTRO_VIDEO" frameborder="0" allowfullscreen></iframe>
+        </div>
+
         <button onclick="window.open('galeria.html', '_blank')">📷 Ver Galeria Completa</button>
+    </section>
+
+    <!-- Agenda Viva -->
+    <section class="events">
+        <h2>Agenda Viva</h2>
+        <ul>
+            <li>🌾 Feira agrícola - 15 de junho</li>
+            <li>🎭 Festival de cultura rural - 22 de julho</li>
+        </ul>
     </section>
 
     <!-- Leitor Dinâmico -->
@@ -113,4 +137,5 @@
 
 </body>
 </html>
+
 
