@@ -17,6 +17,29 @@
         button:hover {
             background-color: #ddd; /* Efeito ao passar o mouse */
         }
+
+        /* Estilizando a seção de receitas */
+        .receitas {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .receita {
+            display: inline-block;
+            width: 30%;
+            margin: 15px;
+            text-align: center;
+        }
+
+        .receita img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .receita p {
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
@@ -40,13 +63,26 @@
     <section class="stories">
         <h2>Histórias Conectadas</h2>
         <p>Depoimentos de quem vive a conexão entre campo e cidade: </p>
-        <p>"Viver no campo não significa trabalhar com a enxada, como era 30 anos atrás. 
-        O interior não é mais um lugar em que as pessoas não têm acesso a nada e passam dificuldades. 
-        Pelo contrário. Estou feliz e, também financeiramente, melhor que na cidade."</p>
-        
-        <p>"Não queria passar a vida inteira fazendo a mesma coisa. 
-        E também tinha essa vontade de produzir meu próprio alimento, de viver mais em contato com a natureza",
-        conta o empresário que virou agricultor orgânico."</p>
+        <p>"Viver no campo não significa trabalhar com a enxada, como era 30 anos atrás..."</p>
+    </section>
+
+    <!-- Seção de Receitas -->
+    <section class="receitas">
+        <h2>Receitas do Campo</h2>
+        <div class="receita">
+            <img src="bolo-milho.jpg" alt="Bolo de milho">
+            <p>Um delicioso bolo de milho cremoso, feito com ingredientes naturais.</p>
+        </div>
+
+        <div class="receita">
+            <img src="pao-caseiro.jpg" alt="Pão caseiro">
+            <p>Pão artesanal assado em forno de barro, com sabor autêntico.</p>
+        </div>
+
+        <div class="receita">
+            <img src="queijo-rural.jpg" alt="Queijo artesanal">
+            <p>Queijo fresco feito com leite direto do produtor rural.</p>
+        </div>
     </section>
 
     <!-- Mapa Interativo -->
@@ -64,8 +100,8 @@
         </audio>
         
         <div class="video-container">
-            <a href="https://youtu.be/EVkdn9viUO8?si=0V8MXDMIMkA-ZLjZ" class="cta-button" target="_blank">Impactos do campo a cidade<i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-color);"></i></a> Entrevista sobre a conexão campo-cidade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://youtu.be/pzR6-ZEqY9g?si=uFE2FcffNY0JFmRq" class="cta-button" target="_blank">História de produtores rurais <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-color);"></i></a>
+            <a href="https://youtu.be/EVkdn9viUO8?si=0V8MXDMIMkA-ZLjZ" class="cta-button" target="_blank">Impactos do campo a cidade<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://youtu.be/pzR6-ZEqY9g?si=uFE2FcffNY0JFmRq" class="cta-button" target="_blank">História de produtores rurais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
     </section>
 
@@ -97,27 +133,6 @@
         <button>🎮 Explorar</button>
     </section>
 
-    <!-- Galeria de Fotos & Vídeos -->
-    <section class="gallery">
-        <h2>Galeria de Fotos & Vídeos</h2>
-        <p>Veja momentos incríveis que conectam campo e cidade.</p>
-
-        <div class="gallery-container">
-            <img src="images/foto1.jpg" alt="Fazenda ao amanhecer">
-            <img src="images/foto2.jpg" alt="Feira de produtos orgânicos">
-            <img src="images/foto3.jpg" alt="Crianças aprendendo a plantar">
-            <img src="images/foto4.jpg" alt="Colheita de hortaliças frescas">
-            <img src="images/foto5.jpg" alt="Família em um sítio rural">
-        </div>
-
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_AQUI" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OUTRO_VIDEO" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <button onclick="window.open('galeria.html', '_blank')">📷 Ver Galeria Completa</button>
-    </section>
-
     <!-- Agenda Viva -->
     <section class="events">
         <h2>Agenda Viva</h2>
@@ -144,6 +159,3 @@
 
 </body>
 </html>
-
-
-
