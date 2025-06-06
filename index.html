@@ -100,6 +100,94 @@
         <p>Compre produtos direto dos produtores rurais.</p>
         <button>🔎 Explorar Produtos</button>
     </section>
+    <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festejando a conexão campo-cidade</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Melhorando os botões */
+        button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        /* Janela modal */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .modal img {
+            width: 100px;
+            margin: 10px;
+        }
+
+        .modal button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="title">Festejando a conexão campo-cidade</h1>
+    </header>
+
+    <!-- Mercado Local -->
+    <section class="market">
+        <h2>Mercado Local</h2>
+        <p>Compre produtos direto dos produtores rurais.</p>
+        <button onclick="openModal()">🔎 Explorar Produtos</button>
+    </section>
+
+    <!-- Janela Modal -->
+    <div id="modal" class="modal">
+        <h2>Produtos disponíveis</h2>
+        <div>
+            <img src="mel-organico.jpg" alt="Mel Orgânico">
+            <p>🍯 Mel Orgânico - R$ 30,00</p>
+        </div>
+        <div>
+            <img src="queijo-artesanal.jpg" alt="Queijo Artesanal">
+            <p>🧀 Queijo Artesanal - R$ 50,00</p>
+        </div>
+        <div>
+            <img src="cafe-rural.jpg" alt="Café Rural">
+            <p>☕ Café Rural - R$ 25,00</p>
+        </div>
+        <button onclick="closeModal()">❌ Fechar</button>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+
 
     <!-- Simulação de Cultivo Urbano -->
     <section class="cultivo">
