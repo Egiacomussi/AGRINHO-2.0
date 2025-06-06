@@ -15,7 +15,7 @@
         }
 
         button:hover {
-            background-color: #ddd; /* Efeito ao passar o mouse */
+            background-color: #ddd;
         }
 
         /* Estilizando a seção de receitas */
@@ -39,6 +39,29 @@
 
         .receita p {
             font-size: 1.2em;
+        }
+
+        /* Janela modal */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .modal img {
+            width: 100px;
+            margin: 10px;
+        }
+
+        .modal button {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -74,69 +97,6 @@
         </div>
     </section>
 
-    <!-- Mapa Interativo -->
-    <section class="map">
-        <h2>Mapa da Conexão</h2>
-        <iframe src="https://www.google.com/maps/embed" width="600" height="450"></iframe>
-    </section>
-
-    <!-- Podcast e Vídeos -->
-    <section class="podcast">
-        <h2>Podcast & Entrevistas em Vídeo</h2>
-        <audio controls>
-            <source src="podcast.mp3" type="audio/mpeg">
-            Seu navegador não suporta áudio.
-        </audio>
-        
-        <div class="video-container">
-            <a href="https://youtu.be/EVkdn9viUO8?si=0V8MXDMIMkA-ZLjZ" class="cta-button" target="_blank">Impactos do campo a cidade<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <a href="https://youtu.be/pzR6-ZEqY9g?si=uFE2FcffNY0JFmRq" class="cta-button" target="_blank">História de produtores rurais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </section>
-
-    <!-- Mercado Local -->
-    <section class="market">
-        <h2>Mercado Local</h2>
-        <p>Compre produtos direto dos produtores rurais.</p>
-    </section>
-    <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festejando a conexão campo-cidade</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Melhorando os botões */
-        button {
-            font-size: 1.5em;
-            padding: 15px 30px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #ddd;
-        }
-
-        /* Janela modal */
-        .modal {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        .modal img {
-            width: 100px;
-            m
-
     <!-- Mercado Local -->
     <section class="market">
         <h2>Mercado Local</h2>
@@ -162,6 +122,45 @@
         <button onclick="closeModal()">❌ Fechar</button>
     </div>
 
+    <!-- Mapa Interativo -->
+    <section class="map">
+        <h2>Mapa da Conexão</h2>
+        <iframe src="https://www.google.com/maps/embed" width="600" height="450"></iframe>
+    </section>
+
+    <!-- Podcast e Vídeos -->
+    <section class="podcast">
+        <h2>Podcast & Entrevistas em Vídeo</h2>
+        <audio controls>
+            <source src="podcast.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+        
+        <div class="video-container">
+            <a href="https://youtu.be/EVkdn9viUO8?si=0V8MXDMIMkA-ZLjZ" class="cta-button" target="_blank">Impactos do campo a cidade<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://youtu.be/pzR6-ZEqY9g?si=uFE2FcffNY0JFmRq" class="cta-button" target="_blank">História de produtores rurais <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </section>
+
+    <!-- Espaço Infantil -->
+    <section class="kids">
+        <h2>Espaço Infantil</h2>
+        <p>Jogos e histórias para crianças aprenderem sobre o campo!</p>
+        <button>🎮 Explorar</button>
+    </section>
+
+    <!-- Agenda Viva -->
+    <section class="events">
+        <h2>Agenda Viva</h2>
+        <ul>
+            <li>🌾 Feira agrícola - 15 de junho</li>
+            <li>🎭 Festival de cultura rural - 22 de julho</li>
+        </ul>
+    </section>
+
+    <!-- Leitor Dinâmico -->
+    <button onclick="speakText()">🔊 Ouça o conteúdo</button>
+
     <script>
         function openModal() {
             document.getElementById("modal").style.display = "block";
@@ -170,20 +169,16 @@
         function closeModal() {
             document.getElementById("modal").style.display = "none";
         }
-    </script>
 
-</body>
-</html>
-
-
-    <!-- Simulação de Cultivo Urbano -->
-    <section class="cultivo">
-        <h2>Simulação: Cultive na Cidade</h2>
-        <p>Aprenda a plantar ervas e vegetais em espaços pequenos!</p>
-        <button onclick="startSimulation()">🌱 Começar Simulação</button>
-    </section>
-
-    <!-- Calculadora de Pegada Rural -->
+        function speakText() {
+            let msg = new SpeechSynthesisUtterance();
+            msg.text = document.body.innerText;
+            msg.lang = "pt-BR";
+            msg.rate = 1.2;
+            msg.pitch = 1.2;
+            msg.volume = 1;
+            window.speechSynthesis.speak(msg);
+        }<!DOCTYPE html>
     <section class="calculator">
         <h2>Calculadora de Pegada Rural</h2>
         <p>Descubra como suas escolhas impactam a conexão campo-cidade.</p>
@@ -219,6 +214,11 @@
             msg.volume = 1;
             window.speechSynthesis.speak(msg);
         }
+    </script>
+
+</body>
+</html>
+
     </script>
 
 </body>
