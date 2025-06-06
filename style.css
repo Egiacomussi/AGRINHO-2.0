@@ -1,7 +1,7 @@
-/* Corrigir fundo bege quente */
+/* Corrigir fundo com tons quentes */
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #f4ece3 !important; /* Bege quente fixo */
+    background-color: #fbe5c0 !important; /* Bege suave */
     color: #3d2b1f; /* Marrom escuro */
     text-align: center;
     margin: 0;
@@ -50,3 +50,26 @@ button:hover {
     transform: scale(1.1);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Adicionando mais cores ao site */
+header {
+    background-color: #d9a775; /* Caramelo */
+    color: #fff;
+    padding: 20px;
+}
+
+footer {
+    background-color: #8b5e3c; /* Marrom */
+    color: #fff;
+    padding: 15px;
+}
+
+a {
+    color: #cf7d34; /* Laranja queimado */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a65f24; /* Laranja mais escuro */
+}
+
