@@ -2,10 +2,26 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f4ece3 !important; /* Bege quente fixo */
-    color: #2e4d20; /* Verde musgo */
+    color: #3d2b1f; /* Marrom escuro */
     text-align: center;
     margin: 0;
     padding: 0;
+}
+
+/* Estilização dos botões */
+button {
+    background-color: #8b5e3c; /* Marrom */
+    color: #fff; /* Texto branco para contraste */
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #6a4227; /* Marrom mais escuro ao passar o mouse */
 }
 
 /* Carrossel funcionando */
@@ -34,4 +50,3 @@ body {
     transform: scale(1.1);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
-
