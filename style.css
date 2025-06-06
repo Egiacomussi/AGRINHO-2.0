@@ -1,75 +1,133 @@
-/* Corrigir fundo com tons quentes */
-body {
-    font-family: "Poppins", sans-serif;
-    background-color: #fbe5c0 !important; /* Bege suave */
-    color: #3d2b1f; /* Marrom escuro */
-    text-align: center;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
 }
 
-/* Estilização dos botões */
-button {
-    background-color: #8b5e3c; /* Marrom */
-    color: #fff; /* Texto branco para contraste */
+/* Variáveis */
+:root {
+    --primary-color: #6D8A49; /* Verde musgo */
+    --secondary-color: #8A9A5B; /* Verde mais claro */
+    --text-color: #556B2F; /* Verde oliva escuro */
+    --background-color: #E6F7E6; /* Verde ainda mais claro */
+    --button-hover: #3D522B; /* Verde mais escuro para hover */
+    --font-body: "Chocolate Classical Sans", serif;
+    --font-titulo: "Rakkas", serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Elementos */
+h3 {
+    color: var(--text-color);
+    margin-top: 25px;
+}
+
+p {
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+img {
+    max-width: 90%;
+}
+
+/* Botões */
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Estilos do carrossel acessível */
+.carousel {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Contêiner das imagens */
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    display: none; /* Esconde todas as imagens por padrão */
+    border-radius: 8px;
+}
+
+/* Mostra a primeira imagem inicialmente */
+.carousel-inner img:first-child {
+    display: block;
+}
+
+/* Botões de navegação */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
 }
 
 button:hover {
-    background-color: #6a4227; /* Marrom mais escuro ao passar o mouse */
+    background-color: var(--button-hover);
 }
 
-/* Carrossel funcionando */
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%;
+    }
+    
+    .conteudo {
+        width: 90%;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .cta-button {
+        width: 100%;
+    }
 }
-
-/* Galeria aprimorada */
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.gallery-container img {
-    width: 200px;
-    height: 150px;
-    border-radius: 8px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-}
-
-.gallery-container img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Adicionando mais cores ao site */
-header {
-    background-color: #d9a775; /* Caramelo */
-    color: #fff;
-    padding: 20px;
-}
-
-footer {
-    background-color: #8b5e3c; /* Marrom */
-    color: #fff;
-    padding: 15px;
-}
-
-a {
-    color: #cf7d34; /* Laranja queimado */
-    text-decoration: none;
-}
-
-a:hover {
-    color: #a65f24; /* Laranja mais escuro */
-}
-
